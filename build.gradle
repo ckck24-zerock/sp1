@@ -32,6 +32,10 @@ dependencies {
     implementation 'org.springframework:spring-webmvc:6.2.3'
     implementation 'org.springframework:spring-context:6.2.3'
 
+    // https://mvnrepository.com/artifact/org.projectlombok/lombok
+    compileOnly 'org.projectlombok:lombok:1.18.30'
+
+
 }
 
 test {

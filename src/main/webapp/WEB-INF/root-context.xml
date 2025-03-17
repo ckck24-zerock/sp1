@@ -7,5 +7,6 @@
 
     <context:component-scan base-package="org.example.sp1.service"></context:component-scan>
 
+    <context:component-scan base-package="org.example.sp1.dao"></context:component-scan>
 
 </beans>

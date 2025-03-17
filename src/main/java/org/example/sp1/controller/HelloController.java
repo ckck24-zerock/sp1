@@ -10,12 +10,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class HelloController {
 
-    private final HelloService helloService;
-
-    public HelloController(@Qualifier("koreanHello") HelloService helloService) {
-        this.helloService = helloService;
-    }
-
     @GetMapping("/hello")
     public String hello() {
         return "hello";

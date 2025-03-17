@@ -5,7 +5,7 @@ import org.apache.ibatis.annotations.Select;
 public interface TimeMapper {
 
     //마지막에 ;없음 주의
-    @Select("select now()")
+    //@Select("select now()")
     String getTime();
 
 }

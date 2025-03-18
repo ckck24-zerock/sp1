@@ -2,6 +2,7 @@ package org.example.mapper;
 
 import lombok.extern.log4j.Log4j2;
 import org.example.sp1.dto.BoardDTO;
+import org.example.sp1.dto.PageRequestDTO;
 import org.example.sp1.mapper.BoardMapper;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -61,7 +62,11 @@ public class BoardMapperTests {
     @Test
     public void selectPageTest() {
 
-        java.util.List<BoardDTO> dtos = mapper.selectPage(10,20);
+        PageRequestDTO page = new PageRequestDTO();
+        page.setPage(-1);
+        page.setSize(100);
+
+        java.util.List<BoardDTO> dtos = mapper.selectPage(page);
 
         dtos.forEach(boardDTO -> log.info(boardDTO));
 

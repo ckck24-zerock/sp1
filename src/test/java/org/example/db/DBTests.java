@@ -26,6 +26,9 @@ public class DBTests {
 
     @Test
     public void testTime() throws SQLException {
+
+        log.info(timeMapper.getClass().getName());
+
         log.info(timeMapper.getTime());
     }
 

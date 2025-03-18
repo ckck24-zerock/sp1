@@ -20,6 +20,8 @@ public interface BoardMapper {
 
     java.util.List<BoardDTO> selectPage(PageRequestDTO page);
 
+    int selectCount();
+
     int update(BoardDTO board);
 
     int delete(Integer bno);

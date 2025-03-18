@@ -45,5 +45,15 @@ public class BoardMapperTests {
 
     }
 
+    @Test
+    public void testSelectAll() throws SQLException {
+
+        java.util.List<BoardDTO> dtos = mapper.selectAll();
+
+        dtos.forEach(boardDTO -> log.info(boardDTO));
+
+    }
+
+
 
 }

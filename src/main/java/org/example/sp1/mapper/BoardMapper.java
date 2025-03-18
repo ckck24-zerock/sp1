@@ -10,4 +10,5 @@ public interface BoardMapper {
 
     BoardDTO selectOne(Integer bno);
 
+    java.util.List<BoardDTO> selectAll();
 }

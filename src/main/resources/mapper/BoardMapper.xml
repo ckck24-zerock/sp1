@@ -10,4 +10,8 @@
         VALUES (#{title}, #{content}, #{writer})
     </insert>
 
+    <select id="selectOne" resultType="org.example.sp1.dto.BoardDTO">
+        select * from tbl_board where bno = #{bno}
+    </select>
+
 </mapper>

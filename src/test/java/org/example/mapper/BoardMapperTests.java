@@ -32,5 +32,14 @@ public class BoardMapperTests {
 
     }
 
+    @Test
+    public void testSelect() throws SQLException {
+
+        BoardDTO dto = mapper.selectOne(2);
+
+        log.info(dto);
+
+    }
+
 
 }

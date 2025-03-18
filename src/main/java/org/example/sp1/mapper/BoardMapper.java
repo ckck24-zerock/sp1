@@ -8,4 +8,6 @@ public interface BoardMapper {
 
     int insert(BoardDTO board);
 
+    BoardDTO selectOne(Integer bno);
+
 }

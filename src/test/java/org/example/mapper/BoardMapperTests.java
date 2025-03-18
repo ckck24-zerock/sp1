@@ -30,6 +30,10 @@ public class BoardMapperTests {
 
         int count = mapper.insert(dto);
 
+        log.info("---------------------------------");
+        log.info("insert count: " + count);
+        log.info(dto.getBno());
+
     }
 
     @Test

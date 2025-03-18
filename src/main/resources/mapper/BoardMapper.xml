@@ -5,13 +5,31 @@
 
 <mapper namespace="org.example.sp1.mapper.BoardMapper">
 
-    <insert id="insert">
+    <insert id="insert" useGeneratedKeys="true" keyProperty="bno">
         insert into tbl_board (title, content, writer)
         VALUES (#{title}, #{content}, #{writer})
     </insert>
 
-    <select id="selectOne" resultType="org.example.sp1.dto.BoardDTO">
+<!--    <insert id="insert">-->
+
+<!--        <selectKey order="AFTER" keyProperty="bno" resultType="int">-->
+<!--            select last_insert_id()-->
+<!--        </selectKey>-->
+
+<!--        insert into tbl_board (title, content, writer)-->
+<!--        VALUES (#{title}, #{content}, #{writer})-->
+<!--    </insert>-->
+
+    <select id="selectOne" resultType="BoardDTO">
         select * from tbl_board where bno = #{bno}
     </select>
 
 </mapper>
+
+
+
+
+
+
+
+

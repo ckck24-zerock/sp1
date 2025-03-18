@@ -2,6 +2,7 @@ package org.example.sp1.mapper;
 
 //반환타입 - insert,update,delete는 int로 반환 (몇 개, count)
 
+import org.apache.ibatis.annotations.Param;
 import org.example.sp1.dto.BoardDTO;
 
 public interface BoardMapper {
@@ -11,6 +12,10 @@ public interface BoardMapper {
     BoardDTO selectOne(Integer bno);
 
     java.util.List<BoardDTO> selectAll();
+
+    java.util.List<BoardDTO> selectPage(
+            @Param("limit") int limit,
+            @Param("offset") int offset);
 
     int update(BoardDTO board);
 

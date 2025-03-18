@@ -59,6 +59,16 @@ public class BoardMapperTests {
     }
 
     @Test
+    public void selectPageTest() {
+
+        java.util.List<BoardDTO> dtos = mapper.selectPage(10,20);
+
+        dtos.forEach(boardDTO -> log.info(boardDTO));
+
+    }
+
+
+    @Test
     public void testUpdate() throws SQLException {
 
         BoardDTO dto = BoardDTO.builder()

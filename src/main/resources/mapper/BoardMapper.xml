@@ -28,6 +28,13 @@
         select * from tbl_board order by bno desc
     </select>
 
+    <select id="selectPage" resultType="BoardDTO">
+        select * from tbl_board
+        where bno > 0
+        order by bno desc
+        limit #{limit} offset #{offset}
+    </select>
+
     <update id="update">
         update tbl_board
         set title= #{title},

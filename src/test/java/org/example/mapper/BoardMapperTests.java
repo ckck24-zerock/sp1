@@ -46,12 +46,29 @@ public class BoardMapperTests {
     }
 
     @Test
-    public void testSelectAll() throws SQLException {
+    public void testSelectAll()  {
 
-        java.util.List<BoardDTO> dtos = mapper.selectAll();
+        try {
+            java.util.List<BoardDTO> dtos = mapper.selectAll();
 
-        dtos.forEach(boardDTO -> log.info(boardDTO));
+            dtos.forEach(boardDTO -> log.info(boardDTO));
 
+        }catch(Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void testUpdate() throws SQLException {
+
+        BoardDTO dto = BoardDTO.builder()
+                .bno(2)
+                .title("sample updated title")
+                .content("sample updated content")
+                .build();
+
+        int count = mapper.update(dto);
+        log.info("update count: " + count);
     }
 
 

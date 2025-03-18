@@ -8,4 +8,6 @@ public interface TimeMapper {
     //@Select("select now()")
     String getTime();
 
+    //@Select("select adddate(now(), interval 100 day)")
+    String after100();
 }

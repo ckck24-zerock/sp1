@@ -6,4 +6,8 @@
     <select id="getTime" resultType="string">
         select now()
     </select>
+
+    <select id="after100" resultType="string">
+        select adddate(now(), interval 100 day)
+    </select>
 </mapper>

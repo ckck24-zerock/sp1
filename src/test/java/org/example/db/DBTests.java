@@ -32,6 +32,13 @@ public class DBTests {
         log.info(timeMapper.getTime());
     }
 
+    @Test
+    public void test100() {
+
+        log.info(timeMapper.after100());
+
+    }
+
 
     @Test
     public void testDB() {
